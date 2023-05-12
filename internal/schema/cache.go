@@ -167,6 +167,7 @@ func (c *cache) createField(field reflect.StructField, parentAlias string) *fiel
 	ft := field.Type
 	m := isTextUnmarshaler(reflect.Zero(ft))
 	if ft.Kind() == reflect.Ptr {
+		aaa
 		ft = ft.Elem()
 	}
 	if isSlice = ft.Kind() == reflect.Slice; isSlice {
